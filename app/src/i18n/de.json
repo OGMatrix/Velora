@@ -1,0 +1,65 @@
+{
+    "flag": "de",
+    "iso": "de",
+    "name": "Deutsch",
+    "languages": {
+        "de": "Deutsch",
+        "en": "Englisch"
+    },
+    "views": {
+        "boot": {
+            "welcome": "Willkommen bei",
+            "register": "Registrieren",
+            "login": "Einloggen"
+        },
+        "language": {
+            "header": "Wähle eine Sprache",
+            "next": "Weiter"
+        },
+        "register": {
+            "header": "Registrieren",
+            "button": "Registrieren"
+        },
+        "otp": {
+            "title": "Account Verifizieren",
+            "subtitle": "Wir haben dir einen 6 stelligen Code per Email geschickt. Bitte gebe diesen unten ein."
+        },
+        "setup": {
+            "theme": {
+                "title": "Wähle dein Farbschema",
+                "subtitle": "Personalisiere dein Velora Erlebnis indem du deine Lieblingsfarbkombination einstellst.",
+                "continue": "Weiter",
+                "colors": {
+                    "blue": "Blau",
+                    "red": "Rot",
+                    "green": "Grün",
+                    "purple": "Lila",
+                    "pink": "Pink",
+                    "yellow": "Gelb",
+                    "dark-blue": "Dunkelblau"
+                }
+            },
+            "files": {
+                ""
+            }
+        }
+    },
+    "auth": {
+        "username": {
+            "title": "Nutzername",
+            "input": "Gebe dein gewünschten Nutzernamen ein"
+        },
+        "email": {
+            "title": "E-Mail",
+            "input": "Gebe dein Mail Adresse ein"
+        },
+        "password": {
+            "title": "Passwort",
+            "input": "Gebe dein gewünschtes Passwort ein"
+        },
+        "otp": {
+            "resend": "Erneut senden",
+            "left": "verbleibend"
+        }
+    }
+}

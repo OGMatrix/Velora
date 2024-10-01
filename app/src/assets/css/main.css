@@ -1,0 +1,59 @@
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  font-family: "Poppins";
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  max-height: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+#app {
+  height: 100%;
+}
+
+h1, a, p {
+  margin: 0;
+}
+
+a {
+  color: var(--primary-accent) !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+}
+
+.button {
+  background-color: var(--primary-accent);
+  color: var(--text-color) !important;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.button.disabled {
+  background-color: var(--secondary-accent) !important;
+  cursor: not-allowed;
+}
+
+.button:hover {
+  background-color: var(--secondary-accent);
+}
+
+.glass-panel {
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(10px); /* Apply blur for the glassy effect */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px var(--shadow-color);
+}
+  

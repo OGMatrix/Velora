@@ -1,0 +1,64 @@
+/* Input Styling */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+  background-color: var(--glass-bg); /* Glass effect background */
+  border: 1px solid var(--secondary-accent); /* Blue border */
+  color: var(--text-color); /* Text color */
+  padding: 10px 15px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 16px;
+  backdrop-filter: blur(10px); /* Glass effect blur */
+  box-shadow: 0 4px 10px var(--shadow-color); /* Light blue shadow */
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Poppins";
+}
+
+input[type="file"] {
+  background-color: var(--primary-accent);
+  color: var(--text-color) !important;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+input[type="file"]:hover {
+  background-color: var(--secondary-accent);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: var(--primary-accent); /* Change border on focus */
+  box-shadow: 0 4px 20px var(--shadow-color); /* Stronger shadow on focus */
+}
+
+/* Optional Placeholder Styling */
+input::placeholder,
+textarea::placeholder {
+  color: var(--highlight-accent); /* Lighter blue for placeholder text */
+  opacity: 0.7; /* Slightly faded */
+}
+
+input.invalid {
+  border: 1px solid #fd4c4c !important;
+  box-shadow: 0 4px 10px #fd4c4c !important;
+}
+
+input.valid {
+  border: 1px solid #9decb7 !important;
+  box-shadow: 0 4px 10px #9decb7 !important;
+}
+
+.invalid-feedback {
+  color: #ffb3b3 !important;
+}

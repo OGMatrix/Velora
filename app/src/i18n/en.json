@@ -1,0 +1,20 @@
+{
+    "flag": "en",
+    "iso": "gb",
+    "name": "English",
+    "languages": {
+        "de": "German",
+        "en": "English"
+    },
+    "views": {
+        "boot": {
+            "welcome": "Welcome to",
+            "register": "Register",
+            "login": "Login"
+        },
+        "language": {
+            "header": "Choose your language!",
+            "next": "Continue"
+        }
+    }
+}

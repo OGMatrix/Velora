@@ -1,0 +1,143 @@
+:root {
+  /* Background Colors */
+  --primary-bg: #1b1d2a; /* Main dark background */
+  --secondary-bg: #2a2e3b; /* Slightly lighter background for contrast */
+
+  /* Accent Colors */
+  --primary-accent: #4da8da; /* Light blue for primary accents (buttons, icons) */
+  --secondary-accent: #3a6ea5; /* Medium blue for secondary actions */
+  --highlight-accent: #6eb6ff; /* Brighter blue for highlights, notifications */
+
+  /* Glass Effect Color */
+  --glass-bg: rgba(
+    77,
+    168,
+    218,
+    0.15
+  ); /* Transparent light blue for glassy effect */
+
+  /* Text Colors */
+  --text-color: #e0e6ed; /* Light blueish-gray for general text */
+  --text-secondary: #919599;
+
+  /* Shadow */
+  --shadow-color: rgba(77, 168, 218, 0.2); /* Blue-tinted shadow */
+
+  /* Window Navigation */
+  --window-nav-bg: #3a3e4b;
+  --window-nav-button-active: #4a4e5b;
+}
+
+.red-theme {
+  --primary-bg: #2a1b1d;
+  --secondary-bg: #3b2a2e;
+
+  --primary-accent: #da4d4d; /* Red accent */
+  --secondary-accent: #a53a3e;
+  --highlight-accent: #ff6e6e;
+
+  --glass-bg: rgba(218, 77, 77, 0.15);
+
+  --text-color: #e6e0ed;
+  --text-secondary: #995959;
+
+  --shadow-color: rgba(218, 77, 77, 0.2);
+
+  --window-nav-bg: #4b3a3e;
+  --window-nav-button-active: #5b4a4e;
+}
+
+.green-theme {
+  --primary-bg: #1b2a1d;
+  --secondary-bg: #2e3b2a;
+
+  --primary-accent: #4dda4d; /* Green accent */
+  --secondary-accent: #3aa53a;
+  --highlight-accent: #6eff6e;
+
+  --glass-bg: rgba(77, 218, 77, 0.15);
+
+  --text-color: #e0ede6;
+  --text-secondary: #599959;
+
+  --shadow-color: rgba(77, 218, 77, 0.2);
+
+  --window-nav-bg: #3a4b3e;
+  --window-nav-button-active: #4a5b4e;
+}
+
+.purple-theme {
+  --primary-bg: #2a1b2d;
+  --secondary-bg: #3b2a4a;
+
+  --primary-accent: #8b4dda; /* Purple accent */
+  --secondary-accent: #6a3aa5;
+  --highlight-accent: #b36eff;
+
+  --glass-bg: rgba(139, 77, 218, 0.15);
+
+  --text-color: #e6e0ed;
+  --text-secondary: #995999;
+
+  --shadow-color: rgba(139, 77, 218, 0.2);
+
+  --window-nav-bg: #4b3a4e;
+  --window-nav-button-active: #5b4a5e;
+}
+
+.pink-theme {
+  --primary-bg: #2a1b25;
+  --secondary-bg: #3b2a35;
+
+  --primary-accent: #da4db6; /* Pink accent */
+  --secondary-accent: #a53a85;
+  --highlight-accent: #ff6ec3;
+
+  --glass-bg: rgba(218, 77, 182, 0.15);
+
+  --text-color: #ede0e6;
+  --text-secondary: #995980;
+
+  --shadow-color: rgba(218, 77, 182, 0.2);
+
+  --window-nav-bg: #4b3a45;
+  --window-nav-button-active: #5b4a55;
+}
+
+.yellow-theme {
+  --primary-bg: #2a2a1b;
+  --secondary-bg: #3b3b2a;
+
+  --primary-accent: #dab74d; /* Yellow accent */
+  --secondary-accent: #a58e3a;
+  --highlight-accent: #ffda6e;
+
+  --glass-bg: rgba(218, 183, 77, 0.15);
+
+  --text-color: #edead0;
+  --text-secondary: #998d59;
+
+  --shadow-color: rgba(218, 183, 77, 0.2);
+
+  --window-nav-bg: #4b4a3a;
+  --window-nav-button-active: #5b5a4e;
+}
+
+.dark-blue-theme {
+  --primary-bg: #1a2430;
+  --secondary-bg: #22303f;
+
+  --primary-accent: #4877da; /* Dark Blue accent */
+  --secondary-accent: #375fa5;
+  --highlight-accent: #6a8fff;
+
+  --glass-bg: rgba(72, 119, 218, 0.15);
+
+  --text-color: #d0e2ed;
+  --text-secondary: #596d99;
+
+  --shadow-color: rgba(72, 119, 218, 0.2);
+
+  --window-nav-bg: #334155;
+  --window-nav-button-active: #3e5065;
+}
