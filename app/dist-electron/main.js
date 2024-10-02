@@ -1,7 +1,16 @@
-import { app, BrowserWindow, ipcMain, nativeImage } from "electron";
+import { ipcMain, app, BrowserWindow, nativeImage } from "electron";
 import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
+import fs from "fs";
+function init(win2) {
+  ipcMain.on("read_media", async (e, path2) => {
+    fs.readdir(path2, (err, files) => {
+      if (err) console.error(err);
+      else win2.webContents.send("read_media", { path: path2, files });
+    });
+  });
+}
 createRequire(import.meta.url);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 process.env.APP_ROOT = path.join(__dirname, "..");
@@ -48,6 +57,7 @@ function createWindow() {
       description: "Create a new window"
     }
   ]);
+  init(win);
 }
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {

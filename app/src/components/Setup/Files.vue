@@ -4,7 +4,7 @@
     <div class="files-inputs">
         <input ref="inputDialog" type="file" webkitdirectory="true" directory="" multiple="false" @input="onInput"/>
         <p>oder</p>
-        <input ref="input" type="text" placeholder="Schreibe den Pfad manuell" />
+        <input ref="input" type="text" placeholder="Schreibe den Pfad manuell" @keyup="checkFiles" />
         <div class="input-card" v-if="path && files">
             <p>Bitte überprüfe folgendes:</p>
             <p>Es wurden <span>{{ files }}</span> in <span>{{ path }}</span> gefunden</p>
@@ -19,9 +19,29 @@ import { defineComponent, ref } from "vue";
 export default defineComponent({
   name: "SetupFiles",
   setup() {
+    const ipc = window.ipcRenderer;
     const inputDialog = ref();
+    const input = ref();
     const path = ref("");
     const files = ref(0);
+
+    const checkFiles = async(e: KeyboardEvent) => {
+        if (e.key === "Enter") {
+            ipc.send("read_media", input.value.value)
+
+            ipc.once("read_media", async(x, json) => {
+                path.value = json.path;
+                for (let i = 0; i < json.files.length; i++) {
+                    const item: any = json.files[i];
+                    if (item !== null) {
+                        if (item.includes(".mkv") || item.includes(".mp4")) {
+                            files.value += 1;
+                        }
+                    }
+                }
+            })
+        }
+    }
 
     const onInput = async(x: any) => {
         const dir: string[] = x.target.files[0].path.split("\\");
@@ -42,7 +62,7 @@ export default defineComponent({
         // files.value = filesList.filter((x) => x.path.includes(".mkv") || x.path.includes(".mp4")).length;
     }
 
-    return { inputDialog, onInput, path, files };
+    return { inputDialog, onInput, path, files, checkFiles, input };
   },
 });
 </script>

@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "baseUrl": ".",
+      "outDir": "./dist",
+      "declaration": true,
+      "noImplicitReturns": true,
+      "forceConsistentCasingInFileNames": true,
+      "noUnusedLocals": true,
+      "removeComments": true,
+      "sourceMap": true,
+      "resolveJsonModule": true,
+      "allowUnreachableCode": true,
+      "module": "commonjs"
+    },
+    "include": ["./src/**/*"]
+  }
+  

@@ -18,6 +18,7 @@ import { defineComponent, ref } from "vue";
 import { useRoute } from "vue-router";
 import SetupTheme from "@/components/Setup/Theme.vue";
 import SetupFiles from "@/components/Setup/Files.vue";
+import { useSettingsStore } from "../../store/settings";
 
 export default defineComponent({
   name: "Setup",
@@ -25,9 +26,11 @@ export default defineComponent({
   setup() {
     const route = useRoute();
     const tab = ref(route.query.tab ? route.query.tab : "theme");
+    const settingsStore = useSettingsStore();
 
     const next = () => {
-      window.location.href = "/setup?tab=media";
+      if (!settingsStore.path || !settingsStore.files) window.location.href = "/setup?tab=media";
+      else if (!settingsStore.importDone) window.location.href = "/setup?tab=import"
     };
 
     return { tab, next };
